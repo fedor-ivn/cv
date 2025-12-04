@@ -245,6 +245,7 @@
     github: "fedor-ivn",
     // twitter: "fedorivn1",
     linkedin: "fedorivn",
+    telegram: "fedor_ivn",
     positions: (
       "Blockchain Engineer",
     ),
