@@ -185,6 +185,11 @@
             #box(fa-icon("globe", fill: color-darknight))
             #box[#link(author.website)[#author.website]]
           ]
+          #if ("telegram" in author) [
+            #separator
+            #box(fa-icon("telegram", fill: color-darknight))
+            #box[#link("https://t.me/" + author.telegram)[#author.telegram]]
+          ]
         ]
       ]
     ]
