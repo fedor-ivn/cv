@@ -283,7 +283,7 @@
       rows: (20pt, auto),
       grid.cell(
         colspan: 1,
-        logo,
+        box(width: 25pt, height: 25pt, align(center, logo)),
       ),
       grid.cell[
         #pad[
