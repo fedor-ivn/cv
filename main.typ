@@ -85,13 +85,9 @@
     align(center)[
       #pad(bottom: 5pt)[
         #block[
-          #set text(size: 32pt, style: "normal", font: header-font)
-          #if language == "zh" or language == "ja" [
-            #text(accent-color, weight: "bold")[#author.lastname]#text(weight: "thin")[#author.firstname]
-          ] else [
-            #text(accent-color, weight: "thin")[#author.firstname]
-            #text(weight: "bold")[#author.lastname]
-          ]
+          #set text(size: 32pt, style: "normal", weight: "regular", font: header-font)
+          #text(accent-color)[#author.firstname]
+          #text[#author.lastname]
         ]
       ]
     ]
