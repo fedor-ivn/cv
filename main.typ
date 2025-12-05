@@ -86,7 +86,8 @@
       #pad(bottom: 5pt)[
         #block[
           #set text(size: 32pt, style: "normal", weight: "regular", font: header-font)
-          #text(accent-color)[#author.firstname]
+          // #text(accent-color)[#author.firstname]
+          #text[#author.firstname]
           #text[#author.lastname]
         ]
       ]
