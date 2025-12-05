@@ -402,18 +402,18 @@
   ]
 ]
 
-#resume-entry(
-  title: "Other Projects",
-  location: "",
-  date: "",
-  description: "",
-)
-#block(above: 1em)[
-  - #link("https://gitlab.com/SnejUgal/bot-api-mock")[Bot API Mock]: Haskell library simulating a Bot API server for testing a Telegram bot.
-  - #link("https://github.com/fedor-ivn/project-f/")[Project F]: A toy functional Lisp-like language in C++, built for a Compilers course.
-  - #link("https://github.com/InnoSWP/b21-02-anonymous-feedback")[Anonymous Feedback]: Real-time feedback collection tool for classroom sessions.
-  - #link("https://gitlab.informatics.ru/2019-2020/online/s101/group-04/dmess")[Dmess]: A messenger built with Django and Vue.js.
-]
+// #resume-entry(
+//   title: "Other Projects",
+//   location: "",
+//   date: "",
+//   description: "",
+// )
+// #block(above: 1em)[
+//   - #link("https://gitlab.com/SnejUgal/bot-api-mock")[Bot API Mock]: Haskell library simulating a Bot API server for testing a Telegram bot.
+//   - #link("https://github.com/fedor-ivn/project-f/")[Project F]: A toy functional Lisp-like language in C++, built for a Compilers course.
+//   - #link("https://github.com/InnoSWP/b21-02-anonymous-feedback")[Anonymous Feedback]: Real-time feedback collection tool for classroom sessions.
+//   - #link("https://gitlab.informatics.ru/2019-2020/online/s101/group-04/dmess")[Dmess]: A messenger built with Django and Vue.js.
+// ]
 
 // = Skills
 
