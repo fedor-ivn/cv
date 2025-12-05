@@ -303,7 +303,7 @@
 #resume-entry-with-logo(
   title: "Blockchain Engineer & Project Owner",
   location: "Remote",
-  date: "February 2024 – Present",
+  date: "Feb 2024 – Present",
   description: "Blockscout",
   logo: image("logos/blockscout.png"),
 )
@@ -324,9 +324,9 @@
 #resume-entry-with-logo(
   title: "Site Reliability Engineer (DWH)",
   location: "Innopolis, Russia",
-  date: "April 2023 – November 2023",
+  date: "Apr 2023 – Nov 2023",
   description: "Tinkoff",
-  logo: image("logos/tinkoff.png"),
+  logo: image("logos/tbank.jpg"),
 )
 #block(above: 1em)[
   Managed high-load analytic databases and storage systems (GreenPlum, Hadoop, LizardFS, and ClickHouse) in a data warehouse with over 13PB of data and more than 10K daily active users.
@@ -363,7 +363,7 @@
 #resume-entry-with-logo(
   title: "Python Backend",
   location: "Remote",
-  date: "Summer 2021",
+  date: "May 2021 - Sep 2021s",
   description: "Promo Interactive",
   logo: image("logos/promo.png"),
 )
@@ -374,9 +374,9 @@
 #resume-entry-with-logo(
   title: "Python Backend",
   location: "Kazan, Russia",
-  date: "Summer 2020",
+  date: "May 2020 - Sep 2020",
   description: "\"STIL\" LTD",
-  logo: none,
+  logo: box(fa-icon("building", fill: color-darkgray, size: 20pt)),
 )
 #block(above: 1em)[
   Developed an automation system to streamline business processes within a logistics company; integrated with external services including 1C, Wialon, and GdePosylka.
