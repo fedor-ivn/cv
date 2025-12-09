@@ -237,6 +237,8 @@
   body
 }
 
+#show link: underline
+  
 #show: resume.with(
   author: (
     firstname: "Fedor",
@@ -361,25 +363,25 @@
 ]
 
 #resume-entry-with-logo(
-  title: "Python Backend",
+  title: "Backend Engineer",
   location: "Remote",
   date: "May 2021 - Sep 2021s",
   description: "Promo Interactive",
   logo: image("logos/promo.png"),
 )
 #block(above: 1em)[
-  Maintained Danone’s internal tool for testing dairy products—a substantial legacy codebase inherited from a third-party vendor.
+  Maintained and optimized a large legacy codebase powering Danone's platform for testing dairy products.
 ]
 
 #resume-entry-with-logo(
-  title: "Python Backend",
+  title: "Backend Engineer",
   location: "Kazan, Russia",
   date: "May 2020 - Sep 2020",
   description: "\"STIL\" LTD",
   logo: box(fa-icon("building", fill: color-darkgray, size: 20pt)),
 )
 #block(above: 1em)[
-  Developed an automation system to streamline business processes within a logistics company; integrated with external services including 1C, Wialon, and GdePosylka.
+  Built an automation system integrating with 1C to streamline logistics company operations.
 ]
 
 = Projects
@@ -397,7 +399,7 @@
 
   #resume-item[
     - Garnered positive feedback from the community; nearly 1 000 students enrolled.
-    - Adopted a cloud development environment (CDE) using Coder, managed via Ansible, Docker, Terraform, and GitLab CI/CD. The CDE is accessible at #link("https://coder.innomastery.ru")[Coder].
+    - Adopted a cloud development environment (CDE) using Coder, managed via Ansible, Docker, Terraform, and GitLab CI/CD. The CDE is accessible at #link("https://coder.innomastery.ru")[coder.innomastery.ru].
     - Engineered a microservice in Scala with the ZIO framework to integrate the CDE with Stepik LMS.
   ]
 ]
@@ -492,7 +494,6 @@
 
 #let certificates_url = "https://drive.google.com/file/d/1AT5iVNn6YGGP-TxuuYN-IaSRFS514hLn/view?usp=sharing"
 
-#show link: underline
 The certificates are available in #link(certificates_url)[Google Drive].
 
 = Research
