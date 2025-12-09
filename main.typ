@@ -343,7 +343,7 @@
 #resume-entry-with-logo(
   title: "Blockchain Track Lead",
   location: "Innopolis, Russia",
-  date: "September 2021 – April 2022",
+  date: "Sep 2021 – Apr 2022",
   description: "Innopolis University",
   logo: image("logos/iu.png"),
 )
@@ -437,18 +437,18 @@
   logo: image("logos/iu.png"),
 )
 #block(above: 1em)[
-  GPA *5.0* Awarded an increased scholarship for excellent academic achievements.
+  GPA *5.0* #sym.bar Awarded an increased scholarship for excellent academic achievements.
 ]
 
 #resume-entry-with-logo(
-  title: "First Programming Education",
+  title: "Programming Curriculum (3 years)",
   location: "Online",
   date: "2017 – 2020",
   description: "Moscow School of Programmers at Yandex",
   logo: image("logos/mshp.png"),
 )
 #block(above: 1em)[
-  GPA *5.0* Led a team for a final project recognized as the best in the stream.
+  GPA *5.0* #sym.bar Led a team for a final project recognized as the best in the stream.
 ]
 
 = Certificates
