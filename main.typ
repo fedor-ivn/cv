@@ -331,14 +331,14 @@
   logo: image("logos/tbank.jpg"),
 )
 #block(above: 1em)[
-  Managed high-load analytic databases and storage systems (GreenPlum, Hadoop, LizardFS, and ClickHouse) in a data warehouse with over 13PB of data and more than 10K daily active users.
+  Managed high-load analytic databases and storage systems (GreenPlum, Hadoop, LizardFS, and ClickHouse) in a data warehouse with over 13PB of data and more than 10K DAU.
 
   #v(0.25em)
 
   #resume-item[
     - Automated LizardFS installation using Ansible roles; enhanced observability with custom probers, alerts, runbooks, and Grafana dashboards.
     - Developed a comprehensive library of Docker images for GreenPlum and LizardFS to support automated testing of ETL pipelines.
-    - Initiated alert retrospectives that reduced false positives and non-critical alerts by nearly 30%.
+    - Initiated alert retrospectives that reduced false positives and non-critical alerts by 30%.
   ]
 ]
 
