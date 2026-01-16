@@ -367,7 +367,7 @@
 #resume-entry-with-logo(
   title: "Backend Engineer",
   location: "Remote",
-  date: "May 2021 - Sep 2021s",
+  date: "May 2021 - Sep 2021",
   description: "Promo Interactive",
   logo: image("logos/promo.png"),
 )
