@@ -496,14 +496,14 @@
 
 The certificates are available in #link(certificates_url)[Google Drive].
 
-= Research
+// = Research
 
-#resume-entry(
-  title: "Research Publications",
-  location: "",
-  date: "",
-  description: "",
-)
-#block(above: 1em)[
-  See the full list in the publications file: #link("../src/publications.yml")[Publications List].
-]
+// #resume-entry(
+//   title: "Research Publications",
+//   location: "",
+//   date: "",
+//   description: "",
+// )
+// #block(above: 1em)[
+//   See the full list in the publications file: #link("../src/publications.yml")[Publications List].
+// ]
