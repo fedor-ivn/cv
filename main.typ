@@ -303,23 +303,25 @@
 = Experience
 
 #resume-entry-with-logo(
-  title: "Blockchain Engineer & Project Owner",
+  title: "Blockchain Engineer / Project Owner (Elixir, Rust)",
   location: "Remote",
   date: "Feb 2024 – Present",
   description: "Blockscout",
   logo: image("logos/blockscout.png"),
 )
 #block(above: 1em)[
-  Spearheaded end-to-end custom feature development and drove core platform enhancements at Blockscout, a leading Ethereum block explorer.
+
+  Hands-on Software Engineer with end-to-end ownership of client-critical
+  projects and new products across major core systems and infrastructure at
+  Blockscout, a leading Ethereum block explorer.
 
   #v(0.25em)
 
   #resume-item[
-    - Owned custom projects for Celo, Zilliqa, and Filecoin, coordinating Design, Frontend, Microservices, and DevOps teams to deliver features from proposal to production.
-    - Led Celo’s Stage 2 migration to OP-stack, streamlining cross-functional workflows and ensuring technical oversight.
-    - Enhanced platform performance by improving GraphQL security, implementing a PostgreSQL prepared-statement optimization (~50% faster), and refactoring Docker workflows to reduce published images by 50%.
-    - Researched indexing technologies (The Graph, Subsquid, Substreams) and integrated insights into client customizations to advance Blockscout’s capabilities.
-    - Actively engage in tech calls, proposing solutions that align development efforts with long-term business goals.
+    - Owned projects for Celo, Filecoin, and Zilliqa. Drove the full lifecycle: Authored proposals, owned requirements, built backend features (Elixir/Rust), coordinated cross-functional partners, and maintained direct client comms.
+    - Actively building and owning a new Rust-based product for indexing cross-chain interactions, starting with Avalanche ICM protocol indexing and expanding support to Omnibridge and LayerZero.
+    - Drove platform enhancements: researched database optimizations (sharding, cooling approaches), streamlined release packaging, and deeply evaluated indexing stacks (The Graph, Subsquid, Substreams).
+    - Drive architectural decisions and support teammates with guidance and collaborative delivery, balancing technical rigor with business value and positioning for technical leadership.
   ]
 ]
 
