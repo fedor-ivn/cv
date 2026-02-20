@@ -1,6 +1,5 @@
 #import "@preview/cetz:0.3.4"
 #import "@preview/modern-cv:0.9.0": *
-#import "@preview/modern-cv:0.9.0" as modern-cv-pkg
 #import "@preview/fontawesome:0.6.0": *
 #import "@preview/linguify:0.4.2": *
 
@@ -62,10 +61,12 @@
   set par(spacing: 0.75em, justify: true)
   set heading(numbering: none, outlined: false)
 
-  show heading.where(level: 1): it => [
+  show heading.where(level: 1): it => block(
+    above: 1em,
+    below: 0.75em,
+  )[
     #set text(size: 16pt, weight: "regular")
     #set align(left)
-    #set block(above: 1em)
     #let color = if colored-headers { accent-color } else { color-darkgray }
     #text[#strong[#text(color)[#it.body]]]
     #box(width: 1fr, line(length: 100%))
@@ -85,7 +86,12 @@
     align(center)[
       #pad(bottom: 5pt)[
         #block[
-          #set text(size: 32pt, style: "normal", weight: "regular", font: header-font)
+          #set text(
+            size: 32pt,
+            style: "normal",
+            weight: "light",
+            font: header-font,
+          )
           // #text(accent-color)[#author.firstname]
           #text[#author.firstname]
           #text[#author.lastname]
@@ -159,18 +165,24 @@
           #if ("linkedin" in author) [
             #separator
             #box(fa-icon("linkedin", fill: color-darknight))
-            #box[#link("https://www.linkedin.com/in/" + author.linkedin)[#author.firstname #author.lastname]]
+            #box[#link(
+              "https://www.linkedin.com/in/" + author.linkedin,
+            )[#author.firstname #author.lastname]]
           ]
           #if ("twitter" in author) [
             #separator
             #box(fa-icon("twitter", fill: color-darknight))
-            #box[#link("https://twitter.com/" + author.twitter)[\@#author.twitter]]
+            #box[#link(
+              "https://twitter.com/" + author.twitter,
+            )[\@#author.twitter]]
           ]
           #if ("scholar" in author) [
             #let fullname = str(author.firstname + " " + author.lastname)
             #separator
             #box(fa-icon("google-scholar", fill: color-darknight))
-            #box[#link("https://scholar.google.com/citations?user=" + author.scholar)[#fullname]]
+            #box[#link(
+              "https://scholar.google.com/citations?user=" + author.scholar,
+            )[#fullname]]
           ]
           #if ("orcid" in author) [
             #separator
@@ -238,7 +250,11 @@
 }
 
 #show link: underline
-  
+
+#let accent-purple-tint = rgb("#7b477e")
+#let light-purple-tint = rgb("#f3eaf4")
+#let profile-picture-size = 3.625cm
+
 #show: resume.with(
   author: (
     firstname: "Fedor",
@@ -257,16 +273,34 @@
     clip: true,
     stroke: 0pt,
     radius: 0pt,
-    width: 3.625cm,
-    height: 3.625cm,
+    width: profile-picture-size,
+    height: profile-picture-size,
     image("./profile.jpeg"),
   ),
   date: datetime.today().display(),
   language: "en",
   colored-headers: true,
   show-footer: false,
-  accent-color: rgb("#7b477e"),
+  accent-color: accent-purple-tint,
 )
+
+// === Skill tag styling (easy to customize) ===
+#let skill-tag-fill = light-purple-tint  // Light purple tint
+#let skill-tag-stroke = accent-purple-tint  // Accent purple border
+#let skill-tag-radius = 3pt
+#let skill-tag-size = 8pt
+
+#let skill-tag(content) = box(
+  fill: skill-tag-fill,
+  stroke: 0.5pt + skill-tag-stroke,
+  radius: skill-tag-radius,
+  inset: (x: 6pt, y: 3pt),
+  text(size: skill-tag-size, content),
+)
+
+#let skill-tags(..skills) = {
+  skills.pos().map(s => skill-tag(s)).join(h(4pt))
+}
 
 #let resume-entry-with-logo(
   title: none,
@@ -278,7 +312,7 @@
   accent-color: default-accent-color,
   location-color: default-location-color,
 ) = {
-  block(above: 1em, below: 0.65em)[
+  block(above: 1em, below: 0.75em)[
     #grid(
       column-gutter: 8pt,
       align: horizon,
@@ -300,6 +334,39 @@
   ]
 }
 
+#let resume-entry-content(
+  summary,
+  content: none,
+  skills: none,
+) = {
+  block(above: 1em, below: 0.75em)[
+    #summary
+
+    #if content != none [
+      #v(0.25em)
+      #resume-item[#content]
+    ]
+
+    #if skills != none [
+      #skill-tags(..skills)
+    ]
+  ]
+}
+
+#let certificate-entry(title, issuer, year) = {
+  block(above: 0.5em, below: 0.5em)[
+    #grid(
+      columns: (1fr, auto),
+      align: (left, right),
+      strong[#title], [#issuer (#year)],
+    )
+  ]
+}
+
+#let section-note(content) = {
+  block(above: 0.75em, below: 0em)[#content]
+}
+
 = Experience
 
 #resume-entry-with-logo(
@@ -309,21 +376,18 @@
   description: "Blockscout",
   logo: image("logos/blockscout.png"),
 )
-#block(above: 1em)[
-
-  Hands-on Software Engineer with end-to-end ownership of client-critical
-  projects and new products across major core systems and infrastructure at
-  Blockscout, a leading Ethereum block explorer.
-
-  #v(0.25em)
-
-  #resume-item[
-    - Owned projects for Celo, Filecoin, and Zilliqa. Drove the full lifecycle: Authored proposals, owned requirements, built backend features (Elixir/Rust), coordinated cross-functional partners, and maintained direct client comms.
-    - Actively building and owning a new Rust-based product for indexing cross-chain interactions, starting with Avalanche ICM protocol indexing and expanding support to Omnibridge and LayerZero.
-    - Drove platform enhancements: researched database optimizations (sharding, cooling approaches), streamlined release packaging, and deeply evaluated indexing stacks (The Graph, Subsquid, Substreams).
-    - Drive architectural decisions and support teammates with guidance and collaborative delivery, balancing technical rigor with business value and positioning for technical leadership.
-  ]
-]
+#resume-entry-content(
+  [
+    Hands-on Software Engineer with end-to-end ownership of client-critical projects and new products across major core systems and infrastructure at Blockscout, a leading Ethereum block explorer.
+  ],
+  content: [
+    - Owned projects for Celo, Filecoin, and Zilliqa. Drove the full lifecycle: Authored proposals, owned requirements, built backend features (Elixir/Rust), coordinated cross-functional team, and maintained direct client comms.
+    - Actively building and owning a new Rust-based product for indexing cross-chain interactions. Successfully delivered Avalanche ICM protocol indexing, with Omnibridge and LayerZero support on the roadmap.
+    - Drove platform enhancements: researched and developed database optimizations (sharding, data cooling), streamlined release process, and implemented architectural patterns from modern indexing frameworks to optimize data ingestion.
+    - Drive architectural and creative decisions, supporting teammates with guidance and collaborative delivery, balancing technical rigor with business value and positioning for technical leadership.
+  ],
+  skills: ("Elixir", "Rust", "Web3", "Indexing", "PostgreSQL"),
+)
 
 #resume-entry-with-logo(
   title: "Site Reliability Engineer (DWH)",
@@ -332,17 +396,17 @@
   description: "Tinkoff",
   logo: image("logos/tbank.jpg"),
 )
-#block(above: 1em)[
-  Managed high-load analytic databases and storage systems (GreenPlum, Hadoop, LizardFS, and ClickHouse) in a data warehouse with over 13PB of data and more than 10K DAU.
-
-  #v(0.25em)
-
-  #resume-item[
+#resume-entry-content(
+  [
+    Managed high-load analytic databases and storage systems (GreenPlum, Hadoop, LizardFS, and ClickHouse) in a data warehouse with over 13PB of data and more than 10K DAU.
+  ],
+  content: [
     - Automated LizardFS installation using Ansible roles; enhanced observability with custom probers, alerts, runbooks, and Grafana dashboards.
     - Developed a comprehensive library of Docker images for GreenPlum and LizardFS to support automated testing of ETL pipelines.
     - Initiated alert retrospectives that reduced false positives and non-critical alerts by 30%.
-  ]
-]
+  ],
+  skills: ("Ansible", "Docker", "GreenPlum", "ClickHouse", "Grafana"),
+)
 
 #resume-entry-with-logo(
   title: "Blockchain Track Lead",
@@ -351,18 +415,18 @@
   description: "Innopolis University",
   logo: image("logos/iu.png"),
 )
-#block(above: 1em)[
-  Led the development of the Blockchain Track for the All-Russian National Technology Olympiad (three stages, Innopolis University).
-
-  #v(0.25em)
-
-  #resume-item[
-    - Designed a comprehensive final task for a Web 3.0 application to assess participants’ blockchain, backend, and frontend skills.
+#resume-entry-content(
+  [
+    Led the development of the Blockchain Track for the All-Russian National Technology Olympiad (three stages, Innopolis University).
+  ],
+  content: [
+    - Designed a comprehensive final task for a Web 3.0 application to assess participants' blockchain, backend, and frontend skills.
     - Streamlined grading through automated checks and LMS integration, significantly reducing workload and minimizing human error.
     - Managed a team of five: set goals, deadlines, and handled unforeseen challenges throughout a season with over 1 000 participants.
     - Earned commendations from both participants and management for successful execution.
-  ]
-]
+  ],
+  skills: ("Solidity", "Web3", "Python", "Testing", "Frontend"),
+)
 
 #resume-entry-with-logo(
   title: "Backend Engineer",
@@ -371,7 +435,9 @@
   description: "Promo Interactive",
   logo: image("logos/promo.png"),
 )
-#block(above: 1em)[
+#resume-entry-content(
+  skills: ("Python", "Django", "CI/CD", "Docker"),
+)[
   Maintained and optimized a large legacy codebase powering Danone's platform for testing dairy products.
 ]
 
@@ -382,7 +448,9 @@
   description: "\"STIL\" LTD",
   logo: box(fa-icon("building", fill: color-darkgray, size: 20pt)),
 )
-#block(above: 1em)[
+#resume-entry-content(
+  skills: ("Python", "Django", "1C"),
+)[
   Built an automation system integrating with 1C to streamline logistics company operations.
 ]
 
@@ -394,17 +462,17 @@
   date: "",
   description: "Stepik",
 )
-#block(above: 1em)[
-  Designed and developed a course that simplifies complex Linux concepts and fosters a holistic understanding. The course includes numerous practical tasks with automated checks and leverages a self-hosted Online IDE for a seamless learning experience. It is available on #link("https://stepik.org/course/171984/promo#toc")[Stepik].
-
-  #v(0.25em)
-
-  #resume-item[
+#resume-entry-content(
+  [
+    Designed and developed a course that simplifies complex Linux concepts and fosters a holistic understanding. The course includes numerous practical tasks with automated checks and leverages a self-hosted Online IDE for a seamless learning experience. It is available on #link("https://stepik.org/course/171984/promo#toc")[Stepik].
+  ],
+  skills: ("Linux", "Ansible", "Docker", "Terraform", "Scala"),
+  content: [
     - Garnered positive feedback from the community; nearly 1 000 students enrolled.
     - Adopted a cloud development environment (CDE) using Coder, managed via Ansible, Docker, Terraform, and GitLab CI/CD. The CDE is accessible at #link("https://coder.innomastery.ru")[coder.innomastery.ru].
     - Engineered a microservice in Scala with the ZIO framework to integrate the CDE with Stepik LMS.
-  ]
-]
+  ],
+)
 
 // #resume-entry(
 //   title: "Other Projects",
@@ -440,7 +508,7 @@
   description: "Innopolis University",
   logo: image("logos/iu.png"),
 )
-#block(above: 1em)[
+#resume-entry-content[
   GPA *5.0* #sym.bar Awarded an increased scholarship for excellent academic achievements.
 ]
 
@@ -451,52 +519,37 @@
   description: "Moscow School of Programmers at Yandex",
   logo: image("logos/mshp.png"),
 )
-#block(above: 1em)[
+#resume-entry-content[
   GPA *5.0* #sym.bar Led a team for a final project recognized as the best in the stream.
 ]
 
 = Certificates
 
-#resume-entry(
-  title: "Diploma for excellent academic achievements",
-  location: "Innopolis University",
-  date: "2023",
-  description: "",
+#certificate-entry(
+  "Diploma for excellent academic achievements",
+  "Innopolis University",
+  "2023",
 )
-
-#resume-entry(
-  title: "Commendation for development of an Olympiad",
-  location: "NTO Committee",
-  date: "2022",
-  description: "",
+#certificate-entry(
+  "Commendation for development of an Olympiad",
+  "NTO Committee",
+  "2022",
 )
-
-#resume-entry(
-  title: "The winning team (Blockchain track)",
-  location: "NTO",
-  date: "2021",
-  description: "",
+#certificate-entry("The winning team (Blockchain track)", "NTO", "2021")
+#certificate-entry(
+  "Summer School in Blockchain",
+  "Innopolis University",
+  "2020",
 )
-
-#resume-entry(
-  title: "Summer School in Blockchain",
-  location: "Innopolis University",
-  date: "2020",
-  description: "",
+#certificate-entry(
+  "Certificate, with honors",
+  "Moscow Programming School at Yandex",
+  "2020",
 )
-
-#resume-entry(
-  title: "Certificate, with honors",
-  location: "Moscow Programming School at Yandex",
-  date: "2020",
-  description: "",
-)
-
-#v(5pt)
 
 #let certificates_url = "https://drive.google.com/file/d/1AT5iVNn6YGGP-TxuuYN-IaSRFS514hLn/view?usp=sharing"
 
-The certificates are available in #link(certificates_url)[Google Drive].
+#section-note[The certificates are available in #link(certificates_url)[Google Drive].]
 
 // = Research
 
