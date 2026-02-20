@@ -49,6 +49,14 @@
           #   dest = "icons";
           #   src = "${inputs.font-awesome}/svgs/regular";
           # }
+          {
+            dest = "profile.jpeg";
+            src = ./profile.jpeg;
+          }
+          {
+            dest = "logos";
+            src = ./logos;
+          }
         ];
       };
 
@@ -67,11 +75,17 @@
         {
           name = "modern-cv";
           version = "0.9.0";
-          # hash = "sha256-8PNPa9TGFybMZ1uuJwb5ET0WGIInmIgg8h24BmdfxlU=";
+          hash = "sha256-zCv2UABp3lBBbYthrSXD4OXWaiIjMdwRPQbq5a8AlUk=";
         }
         {
           name = "fontawesome";
           version = "0.6.0";
+          hash = "sha256-dgb+YAYLEKgMMEWa8yelMvRdEoesPj5HI+70w3mCUcQ=";
+        }
+        {
+          name = "linguify";
+          version = "0.4.2";
+          hash = "sha256-kuoK0r29kvc0rvDIQWELp/fZUm3Bzxc5W8M/YMU3lvg=";
         }
       ];
 
@@ -116,7 +130,7 @@
           # build-script
           watch-script
           # More packages can be added here, like typstfmt
-          # pkgs.typstfmt
+          pkgs.typstyle
         ];
       };
     });
