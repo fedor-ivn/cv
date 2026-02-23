@@ -370,7 +370,7 @@
 = Experience
 
 #resume-entry-with-logo(
-  title: "Blockchain Engineer / Project Owner (Elixir, Rust)",
+  title: "Blockchain Engineer / Project Owner",
   location: "Remote",
   date: "Feb 2024 – Present",
   description: "Blockscout",
