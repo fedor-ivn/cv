@@ -22,6 +22,7 @@ All commands require the Nix flake devshell (activated automatically via direnv 
 - `flake.nix` - Nix flake configuration (fonts, Typst packages, build scripts)
 - `profile.jpeg` - Profile photo
 - `logos/` - Company/institution logos used in the resume
+- `evaluations/` - CV evaluation outputs from the cv-eval skill
 
 ## Typst Packages Used
 

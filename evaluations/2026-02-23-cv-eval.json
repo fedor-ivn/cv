@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "evaluation_mode": "intrinsic",
+    "evaluation_date": "2026-02-23",
+    "inferred_level": "Mid",
+    "inferred_level_confidence": "Medium",
+    "inferred_primary_role_type": "SWE",
+    "word_count_approximate": 650,
+    "page_count_approximate": 1
+  },
+  "gates": {
+    "g1_minimum_content": "Pass",
+    "gate_failure_reason": null
+  },
+  "dimensions": {
+    "d1_impact_achievement": {
+      "score": 2.5,
+      "score_confidence": "High",
+      "confidence_reason": "Clear evidence in bullets; achievement vs responsibility classification is unambiguous",
+      "weight": 0.25,
+      "achievement_bullet_rate": "70%",
+      "responsibility_bullet_count": 2,
+      "key_strengths": [
+        "Strong action verbs throughout (Owned, Drove, Initiated, Designed, Built, Automated, Engineered)",
+        "Most bullets describe outcomes rather than duties",
+        "Good ownership language in current role"
+      ],
+      "key_weaknesses": [
+        "XYZS compliance is mostly at level 2 - outcomes stated but not fully quantified",
+        "Final Blockscout bullet is pure responsibility language ('Drive architectural and creative decisions...')",
+        "Many achievements lack measurement component"
+      ],
+      "bullet_analysis": [
+        {
+          "text": "Owned projects for Celo, Filecoin, and Zilliqa. Drove the full lifecycle: Authored proposals, owned requirements, built backend features (Elixir/Rust), coordinated cross-functional team, and maintained direct client comms.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": true },
+          "missing": "Y (quantification): No metrics on project outcomes, timeline, or scale of features delivered",
+          "rewrite_hint": "Add measurable outcomes: number of endpoints, users served, revenue impact, or delivery timeline"
+        },
+        {
+          "text": "Actively building and owning a new Rust-based product for indexing cross-chain interactions. Successfully delivered Avalanche ICM protocol indexing, with Omnibridge and LayerZero support on the roadmap.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": false },
+          "missing": "Y (no metrics), S (no scale of transactions/chains indexed)",
+          "rewrite_hint": "Quantify: transactions indexed per day, chains supported, latency improvements"
+        },
+        {
+          "text": "Drove platform enhancements: researched and developed database optimizations (sharding, data cooling), streamlined release process, and implemented architectural patterns from modern indexing frameworks to optimize data ingestion.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": false },
+          "missing": "Y (no improvement metrics), S (no data volume or user scale)",
+          "rewrite_hint": "Add: % improvement in query latency, ingestion throughput increase, release cycle reduction"
+        },
+        {
+          "text": "Drive architectural and creative decisions, supporting teammates with guidance and collaborative delivery, balancing technical rigor with business value and positioning for technical leadership.",
+          "xyzs_score": 0,
+          "components": { "X": false, "Y": false, "Z": false, "S": false },
+          "missing": "All components - this is responsibility/aspiration language with no concrete outcome",
+          "rewrite_hint": "Replace with specific leadership outcome: decisions made, PRs reviewed, mentees supported, or initiatives shipped"
+        },
+        {
+          "text": "Automated LizardFS installation using Ansible roles; enhanced observability with custom probers, alerts, runbooks, and Grafana dashboards.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": true },
+          "missing": "Y (no time savings or reliability improvement metrics)",
+          "rewrite_hint": "Add: deployment time reduction, MTTR improvement, or incident detection rate"
+        },
+        {
+          "text": "Developed a comprehensive library of Docker images for GreenPlum and LizardFS to support automated testing of ETL pipelines.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": true },
+          "missing": "Y (no metrics on test coverage improvement or pipeline count)",
+          "rewrite_hint": "Add: number of pipelines supported, test execution time reduction, coverage improvement"
+        },
+        {
+          "text": "Initiated alert retrospectives that reduced false positives and non-critical alerts by 30%.",
+          "xyzs_score": 3,
+          "components": { "X": true, "Y": true, "Z": true, "S": false },
+          "missing": "S (scale of alert volume or team size affected)",
+          "rewrite_hint": "Add scope: 'across X alerts/month' or 'for Y-person on-call rotation'"
+        },
+        {
+          "text": "Designed a comprehensive final task for a Web 3.0 application to assess participants' blockchain, backend, and frontend skills.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": true },
+          "missing": "Y (no metrics on task complexity or participant success rate)",
+          "rewrite_hint": "Add: completion rate, skill assessment accuracy, or comparison to previous years"
+        },
+        {
+          "text": "Streamlined grading through automated checks and LMS integration, significantly reducing workload and minimizing human error.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": true },
+          "missing": "Y ('significantly' is hedged - needs actual percentage)",
+          "rewrite_hint": "Replace 'significantly' with actual metric: 'reduced grading time by X%' or 'from Y hours to Z hours'"
+        },
+        {
+          "text": "Managed a team of five: set goals, deadlines, and handled unforeseen challenges throughout a season with over 1,000 participants.",
+          "xyzs_score": 3,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": "Could strengthen with outcome metrics (on-time delivery, participant satisfaction)",
+          "rewrite_hint": "Add outcome: 'delivered on time' or 'with X% participant satisfaction'"
+        },
+        {
+          "text": "Earned commendations from both participants and management for successful execution.",
+          "xyzs_score": 1,
+          "components": { "X": true, "Y": false, "Z": false, "S": false },
+          "missing": "YZS - vague recognition claim without specifics",
+          "rewrite_hint": "Consider removing or merging with previous bullet; if keeping, specify what was recognized"
+        },
+        {
+          "text": "Maintained and optimized a large legacy codebase powering Danone's platform for testing dairy products.",
+          "xyzs_score": 1,
+          "components": { "X": true, "Y": false, "Z": false, "S": true },
+          "missing": "Y (no optimization metrics), Z (no method details); 'large' is hedged",
+          "rewrite_hint": "Add: lines of code, performance improvement %, or specific optimizations made"
+        },
+        {
+          "text": "Built an automation system integrating with 1C to streamline logistics company operations.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": true },
+          "missing": "Y (no efficiency gains or time savings quantified)",
+          "rewrite_hint": "Add: time saved per operation, orders processed, or manual steps eliminated"
+        },
+        {
+          "text": "Garnered positive feedback from the community; nearly 1,000 students enrolled.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": true, "Z": false, "S": true },
+          "missing": "Z (no method described for achieving enrollment)",
+          "rewrite_hint": "Consider merging with course description or adding completion rate"
+        },
+        {
+          "text": "Adopted a cloud development environment (CDE) using Coder, managed via Ansible, Docker, Terraform, and GitLab CI/CD.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": true },
+          "missing": "Y (no metrics on environment usage or student experience improvement)",
+          "rewrite_hint": "Add: concurrent users supported, setup time reduction, or availability metrics"
+        },
+        {
+          "text": "Engineered a microservice in Scala with the ZIO framework to integrate the CDE with Stepik LMS.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": true },
+          "missing": "Y (no performance or usage metrics)",
+          "rewrite_hint": "Add: requests handled, latency, or integration reliability metrics"
+        }
+      ],
+      "top_rewrite_suggestions": [
+        {
+          "original": "Drive architectural and creative decisions, supporting teammates with guidance and collaborative delivery, balancing technical rigor with business value and positioning for technical leadership.",
+          "rewritten": "Led 3 architectural decisions that shaped the cross-chain indexing product, including event-driven ingestion patterns that improved throughput by X%. Mentored 2 junior engineers through PR reviews and pairing sessions.",
+          "xyzs_before": 0,
+          "xyzs_after": 3,
+          "pattern_applied": "responsibility-to-achievement",
+          "data_needed": "Specific decisions made, throughput metrics, number of engineers mentored, PR review count"
+        },
+        {
+          "original": "Owned projects for Celo, Filecoin, and Zilliqa. Drove the full lifecycle: Authored proposals, owned requirements, built backend features (Elixir/Rust), coordinated cross-functional team, and maintained direct client comms.",
+          "rewritten": "Owned end-to-end delivery of blockchain integrations for Celo, Filecoin, and Zilliqa, shipping X endpoints serving Y daily requests. Authored proposals, built backend features in Elixir/Rust, and coordinated a cross-functional team of Z to meet client deadlines.",
+          "xyzs_before": 2,
+          "xyzs_after": 4,
+          "pattern_applied": "add-quantification",
+          "data_needed": "Number of endpoints shipped, daily request volume, team size coordinated"
+        },
+        {
+          "original": "Streamlined grading through automated checks and LMS integration, significantly reducing workload and minimizing human error.",
+          "rewritten": "Reduced grading time by 60% (from X hours to Y hours per round) by building automated checks and LMS integration, eliminating manual scoring errors for 1,000+ submissions.",
+          "xyzs_before": 2,
+          "xyzs_after": 4,
+          "pattern_applied": "add-quantification",
+          "data_needed": "Actual time reduction percentage, hours before/after, submission count per round"
+        }
+      ]
+    },
+    "d2_quantification": {
+      "score": 2.0,
+      "score_confidence": "High",
+      "confidence_reason": "Quantification presence is directly observable; rate calculation is objective",
+      "weight": 0.20,
+      "quantification_rate": "31%",
+      "key_strengths": [
+        "Strong context in Tinkoff summary (13PB data, 10K DAU)",
+        "Good team/participant scale in Blockchain Track role (team of 5, 1000 participants)",
+        "Clear percentage in alert retrospectives bullet (30% reduction)"
+      ],
+      "key_weaknesses": [
+        "Most Blockscout bullets lack any quantification despite being current/primary role",
+        "Hedged language used: 'significantly', 'large', 'comprehensive'",
+        "No revenue, user, or performance metrics in most recent role"
+      ],
+      "bullet_analysis": [
+        {
+          "text": "Managed high-load analytic databases and storage systems (GreenPlum, Hadoop, LizardFS, and ClickHouse) in a data warehouse with over 13PB of data and more than 10K DAU.",
+          "xyzs_score": 3,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": null,
+          "rewrite_hint": "This is a strong summary with good quantification"
+        },
+        {
+          "text": "Initiated alert retrospectives that reduced false positives and non-critical alerts by 30%.",
+          "xyzs_score": 3,
+          "components": { "X": true, "Y": true, "Z": true, "S": false },
+          "missing": "S - would benefit from alert volume or team impact context",
+          "rewrite_hint": "Add: 'across X monthly alerts' or 'saving Y hours of on-call investigation time'"
+        },
+        {
+          "text": "Managed a team of five: set goals, deadlines, and handled unforeseen challenges throughout a season with over 1,000 participants.",
+          "xyzs_score": 3,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": null,
+          "rewrite_hint": "Could add outcome metric like on-time delivery or satisfaction score"
+        },
+        {
+          "text": "Garnered positive feedback from the community; nearly 1,000 students enrolled.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": true, "Z": false, "S": true },
+          "missing": "Z - how was this achieved? Consider adding completion rate",
+          "rewrite_hint": "Add completion rate or course rating if available"
+        }
+      ],
+      "top_rewrite_suggestions": [
+        {
+          "original": "Drove platform enhancements: researched and developed database optimizations (sharding, data cooling), streamlined release process, and implemented architectural patterns from modern indexing frameworks to optimize data ingestion.",
+          "rewritten": "Improved data ingestion throughput by X% through database optimizations (sharding, data cooling) and modern indexing patterns. Streamlined release process from Y days to Z days cycle time.",
+          "xyzs_before": 2,
+          "xyzs_after": 4,
+          "pattern_applied": "add-quantification",
+          "data_needed": "Throughput improvement percentage, release cycle time before/after"
+        },
+        {
+          "original": "Actively building and owning a new Rust-based product for indexing cross-chain interactions. Successfully delivered Avalanche ICM protocol indexing, with Omnibridge and LayerZero support on the roadmap.",
+          "rewritten": "Built Rust-based cross-chain indexing product processing X transactions/day across Y chains. Delivered Avalanche ICM protocol indexing with Z% uptime, with Omnibridge and LayerZero integrations in progress.",
+          "xyzs_before": 2,
+          "xyzs_after": 4,
+          "pattern_applied": "add-quantification",
+          "data_needed": "Daily transaction volume, number of chains, uptime percentage"
+        }
+      ]
+    },
+    "d3_clarity_conciseness": {
+      "score": 3.0,
+      "score_confidence": "High",
+      "confidence_reason": "Language quality is directly assessable from CV text",
+      "weight": 0.15,
+      "flagged_patterns": [
+        "One bullet uses vague aspirational language ('positioning for technical leadership')",
+        "Minor buzzword usage: 'comprehensive', 'holistic'"
+      ],
+      "weak_verbs_found": ["Maintained"],
+      "buzzwords_found": ["comprehensive", "holistic", "streamlined", "significantly"],
+      "key_strengths": [
+        "Strong action verbs throughout (Owned, Drove, Initiated, Designed, Built, Automated, Engineered)",
+        "Bullet length is appropriate - most are 15-30 words",
+        "No passive voice issues",
+        "Clear, professional tone"
+      ],
+      "key_weaknesses": [
+        "Some hedged quantifiers ('significantly', 'large') instead of specific numbers",
+        "Final Blockscout bullet is wordy and lacks concrete content",
+        "'Comprehensive' used twice - minor redundancy"
+      ]
+    },
+    "d4_structure_formatting": {
+      "score": 3.5,
+      "score_confidence": "High",
+      "confidence_reason": "Structure and formatting are directly observable from CV source",
+      "weight": 0.15,
+      "sections_present": ["Contact Information", "Experience", "Projects", "Education", "Certificates"],
+      "sections_missing": ["Standalone Skills Section"],
+      "formatting_issues": [
+        "Skills are embedded per-role rather than in a dedicated scannable section - this is an acceptable alternative but slightly less scannable for recruiters"
+      ],
+      "hierarchy_issues": [],
+      "length_flag": "Appropriate - approximately 1 page for Mid-level candidate"
+    },
+    "d5_career_progression": {
+      "score": 3.5,
+      "score_confidence": "Medium",
+      "confidence_reason": "Progression is visible but education timeline overlaps work history; some ambiguity about full-time vs part-time early roles",
+      "weight": 0.10,
+      "progression_signals": [
+        "Clear scope growth: Backend Engineer → SRE (DWH) → Blockchain Engineer/Project Owner",
+        "Increasing ownership: from 'automation system' to 'client-critical projects' and 'new products'",
+        "Leadership growth: from individual contributor to managing team of 5, coordinating cross-functional teams",
+        "Current role at recognized blockchain company (Blockscout) with significant ownership"
+      ],
+      "stagnation_flags": [],
+      "gap_flags": [
+        "~4 month gap between STIL LTD (Sep 2020) and Promo Interactive (May 2021) - likely academic focus, not concerning",
+        "~5 month gap between Blockchain Track Lead (Apr 2022) and Tinkoff (Apr 2023) - context might be helpful but within acceptable range"
+      ],
+      "recency_weighting_ok": true
+    },
+    "d6_technical_signal": {
+      "score": 3.0,
+      "score_confidence": "Medium",
+      "confidence_reason": "Blockchain and distributed systems domain requires some inference; skills appear credible but depth varies",
+      "weight": 0.10,
+      "skills_list_size": 18,
+      "over_listing_flag": false,
+      "categorized_flag": true,
+      "depth_signal_assessment": "Good depth demonstrated in infrastructure (13PB warehouse, database optimizations) and blockchain domains. Skills are tied to specific roles and supported by bullet evidence. Elixir/Rust combination is credible for Blockscout. Some bullets lack implementation detail that would demonstrate deeper technical signal.",
+      "skill_bullet_inconsistencies": [
+        "PostgreSQL listed for Blockscout but no explicit database work mentioned in bullets (though 'database optimizations' implies it)",
+        "Frontend listed for Blockchain Track Lead but bullets focus on backend/grading automation"
+      ]
+    },
+    "d7_spelling_grammar": {
+      "score": 4.0,
+      "score_confidence": "High",
+      "confidence_reason": "No spelling, grammar, or professionalism issues detected",
+      "weight": 0.05,
+      "error_count_approximate": 0,
+      "errors_found": [],
+      "tense_consistency": "Consistent",
+      "professionalism_flags": []
+    }
+  },
+  "composite": {
+    "raw_weighted_score": 2.85,
+    "normalized_score": 62,
+    "label": "Adequate"
+  },
+  "flags": {
+    "hard_flags": [],
+    "soft_flags": [
+      "Current role (Blockscout) has weakest quantification despite being most important for job search",
+      "Education still in progress (2021 – Present) but work experience is substantial"
+    ],
+    "bias_guardrail_notes": [
+      "Level inference: Classified as Mid with Medium confidence. Junior was considered given ongoing education, but ownership signals and scope justify Mid classification.",
+      "Role type: SWE assumed based on technical depth and engineering focus across all roles.",
+      "Scope for Blockscout bullets is inferred from company context rather than explicitly stated - this affects XYZS scores."
+    ]
+  },
+  "priority_improvements": [
+    {
+      "rank": 1,
+      "dimension": "D2",
+      "issue": "Most recent/primary role (Blockscout) lacks quantification",
+      "suggestion": "Add metrics to Blockscout bullets: transaction volumes, latency improvements, client revenue impact, or system scale",
+      "example_before": "Actively building and owning a new Rust-based product for indexing cross-chain interactions.",
+      "example_after": "Built Rust-based cross-chain indexing product processing 50K+ transactions/day across 3 chains with 99.9% uptime."
+    },
+    {
+      "rank": 2,
+      "dimension": "D1",
+      "issue": "Final Blockscout bullet is responsibility language, not achievement",
+      "suggestion": "Replace with specific leadership outcome or remove entirely",
+      "example_before": "Drive architectural and creative decisions, supporting teammates with guidance...",
+      "example_after": "Led 3 architectural decisions shaping the indexing product. Mentored 2 engineers through code reviews and pairing sessions."
+    },
+    {
+      "rank": 3,
+      "dimension": "D2",
+      "issue": "Hedged quantifiers used instead of specific numbers",
+      "suggestion": "Replace 'significantly', 'large', 'comprehensive' with actual metrics",
+      "example_before": "...significantly reducing workload and minimizing human error.",
+      "example_after": "...reducing grading time by 60% and eliminating manual scoring errors."
+    },
+    {
+      "rank": 4,
+      "dimension": "D4",
+      "issue": "Skills are embedded per-role rather than in a scannable section",
+      "suggestion": "Consider adding a dedicated Skills section at top or bottom for quick scanning, while keeping role-specific skills inline",
+      "example_before": null,
+      "example_after": null
+    },
+    {
+      "rank": 5,
+      "dimension": "D1",
+      "issue": "Project bullets could show more impact",
+      "suggestion": "Add course completion rate, student outcomes, or continued usage metrics for Linux course",
+      "example_before": "Garnered positive feedback from the community; nearly 1,000 students enrolled.",
+      "example_after": "Grew enrollment to 1,000+ students with 4.8/5 rating and 65% completion rate, outperforming platform average by 2x."
+    }
+  ],
+  "summary_narrative": "This CV belongs to a Mid-level SWE with approximately 3 years of experience, currently pursuing a Bachelor's degree while working as a Blockchain Engineer at Blockscout. The CV demonstrates strong progression from early backend roles through SRE to blockchain engineering with increasing ownership. Key strengths include clear achievement-oriented language, good technical breadth, and professional presentation. The primary weakness is insufficient quantification, particularly in the current role which carries the most weight for job applications. With targeted additions of metrics (transaction volumes, latency improvements, team sizes, and delivery timelines), this CV could move from Adequate (62/100) to Strong (70+) territory. The writing quality and structure are solid; the main opportunity is converting good qualitative achievements into verifiable quantitative ones."
+}
