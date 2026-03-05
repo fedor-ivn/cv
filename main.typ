@@ -262,11 +262,10 @@
     email: "ivnfedor@gmail.com",
     phone: "+7 (996) 336-35-01",
     github: "fedor-ivn",
-    // twitter: "fedorivn1",
     linkedin: "fedorivn",
     telegram: "fedor_ivn",
     positions: (
-      "Blockchain Engineer",
+      "Software Engineer & Tech Lead",
     ),
   ),
   profile-picture: block(
@@ -275,7 +274,7 @@
     radius: 0pt,
     width: profile-picture-size,
     height: profile-picture-size,
-    image("./profile.jpeg"),
+    image("assets/profile.jpeg"),
   ),
   date: datetime.today().display(),
   language: "en",
@@ -335,17 +334,17 @@
 }
 
 #let resume-entry-content(
-  summary,
-  content: none,
+  content,
+  summary: none,
   skills: none,
 ) = {
   block(above: 1em, below: 0.75em)[
-    #summary
-
-    #if content != none [
+    #if summary != none [
+      #summary
       #v(0.25em)
-      #resume-item[#content]
     ]
+    
+    #resume-item[#content]
 
     #if skills != none [
       #skill-tags(..skills)
@@ -370,37 +369,33 @@
 = Experience
 
 #resume-entry-with-logo(
-  title: "Blockchain Engineer / Project Owner",
+  title: "Blockchain Engineer & Tech Lead",
   location: "Remote",
   date: "Feb 2024 – Present",
-  description: "Blockscout",
-  logo: image("logos/blockscout.png"),
+  description: link("https://blockscout.com")[Blockscout],
+  logo: image("assets/logos/blockscout.png"),
 )
 #resume-entry-content(
   [
-    Hands-on Software Engineer with end-to-end ownership of client-critical projects and new products across major core systems and infrastructure at Blockscout, a leading Ethereum block explorer.
+    - Architected an #link("https://github.com/blockscout/blockscout-rs/tree/main/interchain-indexer")[open-source Rust indexer] for cross-chain bridge messages, delivering Avalanche ICM/ICTT coverage across 400+ L1s (#sym.approx\160K bridging routes) --- Blockscout's self-hostable alternative to Routescan --- actively extending to LayerZero (159M+ messages, 168 chains).
+    - Led end-to-end delivery for Celo (Blockscout's busiest instance: 25K DAU, #sym.approx\1.84M txs/day), Filecoin FVM, and Zilliqa by executing core backend development and leading cross-functional team --- generating #sym.approx\$420K in development revenue and converting all 3 chains to \$300K+/year in hosting contracts; earned commendations from Celo.
+    - Reclaimed #sym.approx\340 TiB (#sym.approx\61%) across 48 Blockscout instances through research schema normalizations --- address interning, log-topic deduplication, on-demand bytecode fetching --- plus designed a citus-columnar archival tier for internal transactions (benchmarked #sym.approx\10x compression).
   ],
-  content: [
-    - Owned projects for Celo, Filecoin, and Zilliqa. Drove the full lifecycle: Authored proposals, owned requirements, built backend features (Elixir/Rust), coordinated cross-functional team, and maintained direct client comms.
-    - Actively building and owning a new Rust-based product for indexing cross-chain interactions. Successfully delivered Avalanche ICM protocol indexing, with Omnibridge and LayerZero support on the roadmap.
-    - Drove platform enhancements: researched and developed database optimizations (sharding, data cooling), streamlined release process, and implemented architectural patterns from modern indexing frameworks to optimize data ingestion.
-    - Drive architectural and creative decisions, supporting teammates with guidance and collaborative delivery, balancing technical rigor with business value and positioning for technical leadership.
-  ],
-  skills: ("Elixir", "Rust", "Web3", "Indexing", "PostgreSQL"),
+  skills: ("Rust", "Elixir", "Web3", "Indexing", "PostgreSQL"),
 )
 
 #resume-entry-with-logo(
   title: "Site Reliability Engineer (DWH)",
   location: "Innopolis, Russia",
   date: "Apr 2023 – Nov 2023",
-  description: "Tinkoff",
-  logo: image("logos/tbank.jpg"),
+  description: link("https://tinkoff.ru")[Tinkoff],
+  logo: image("assets/logos/tbank.jpg"),
 )
 #resume-entry-content(
-  [
+  summary: [
     Managed high-load analytic databases and storage systems (GreenPlum, Hadoop, LizardFS, and ClickHouse) in a data warehouse with over 13PB of data and more than 10K DAU.
   ],
-  content: [
+  [
     - Automated LizardFS installation using Ansible roles; enhanced observability with custom probers, alerts, runbooks, and Grafana dashboards.
     - Developed a comprehensive library of Docker images for GreenPlum and LizardFS to support automated testing of ETL pipelines.
     - Initiated alert retrospectives that reduced false positives and non-critical alerts by 30%.
@@ -412,17 +407,17 @@
   title: "Blockchain Track Lead",
   location: "Innopolis, Russia",
   date: "Sep 2021 – Apr 2022",
-  description: "Innopolis University",
-  logo: image("logos/iu.png"),
+  description: link("https://innopolis.university")[Innopolis University],
+  logo: image("assets/logos/iu.png"),
 )
 #resume-entry-content(
-  [
-    Led the development of the Blockchain Track for the All-Russian National Technology Olympiad (three stages, Innopolis University).
+  summary: [
+    Led the development of the Blockchain Track for the All-Russian National Technology Olympiad (3 stages, Innopolis University).
   ],
-  content: [
+  [
     - Designed a comprehensive final task for a Web 3.0 application to assess participants' blockchain, backend, and frontend skills.
     - Streamlined grading through automated checks and LMS integration, significantly reducing workload and minimizing human error.
-    - Managed a team of five: set goals, deadlines, and handled unforeseen challenges throughout a season with over 1 000 participants.
+    - Managed a team of 5: set goals, deadlines, and handled unforeseen challenges throughout a season with over 1000 participants.
     - Earned commendations from both participants and management for successful execution.
   ],
   skills: ("Solidity", "Web3", "Python", "Testing", "Frontend"),
@@ -431,28 +426,16 @@
 #resume-entry-with-logo(
   title: "Backend Engineer",
   location: "Remote",
-  date: "May 2021 - Sep 2021",
+  date: "May 2020 – Sep 2021",
   description: "Promo Interactive",
-  logo: image("logos/promo.png"),
+  logo: image("assets/logos/promo.png"),
 )
 #resume-entry-content(
-  skills: ("Python", "Django", "CI/CD", "Docker"),
-)[
-  Maintained and optimized a large legacy codebase powering Danone's platform for testing dairy products.
-]
-
-#resume-entry-with-logo(
-  title: "Backend Engineer",
-  location: "Kazan, Russia",
-  date: "May 2020 - Sep 2020",
-  description: "\"STIL\" LTD",
-  logo: box(fa-icon("building", fill: color-darkgray, size: 20pt)),
+  [
+    - Reduced query latency from 30s to 0.5s for Danone's lab software serving ~800 technicians.
+    - Built a logistics automation product licensed at \$1,500/month.
+  ],
 )
-#resume-entry-content(
-  skills: ("Python", "Django", "1C"),
-)[
-  Built an automation system integrating with 1C to streamline logistics company operations.
-]
 
 = Projects
 
@@ -464,14 +447,10 @@
 )
 #resume-entry-content(
   [
-    Designed and developed a course that simplifies complex Linux concepts and fosters a holistic understanding. The course includes numerous practical tasks with automated checks and leverages a self-hosted Online IDE for a seamless learning experience. It is available on #link("https://stepik.org/course/171984/promo#toc")[Stepik].
+    - Generated \$32,800 in revenue from >1,000 enrolled students by launching a Linux course on #link("https://stepik.org/course/171984/promo")[Stepik] with auto-grading and a self-hosted Cloud IDE.
+    - Cut ongoing maintenance to #sym.approx\6h/month by shipping a Scala/ZIO microservice for Stepik LMS integration and a Python-based task evaluator.
   ],
-  skills: ("Linux", "Ansible", "Docker", "Terraform", "Scala"),
-  content: [
-    - Garnered positive feedback from the community; nearly 1 000 students enrolled.
-    - Adopted a cloud development environment (CDE) using Coder, managed via Ansible, Docker, Terraform, and GitLab CI/CD. The CDE is accessible at #link("https://coder.innomastery.ru")[coder.innomastery.ru].
-    - Engineered a microservice in Scala with the ZIO framework to integrate the CDE with Stepik LMS.
-  ],
+  skills: ("Linux", "Ansible", "Docker", "Terraform", "Python", "Scala"),
 )
 
 // #resume-entry(
@@ -500,56 +479,57 @@
 // )
 
 = Education
+// How we can say in just 2-3 words that my thesis was presented in international workshops/conferences?
 
+// https://popl25.sigplan.org/details/wits-2025-papers/3/Towards-Generic-Higher-Order-Unification-Implementations-in-Haskell
+
+// https://hal.science/hal-05148806/document
+
+// https://cs.newpaltz.edu/unif2025/program.html (look for Generic Second-Order Matching, Higher-Order Preunification and Pattern Unification Implementations in Haskell)
 #resume-entry-with-logo(
-  title: "Bachelor in Computer Science, Software Development track",
+  title: "Bachelor in Computer Science, Software Development Track",
   location: "Innopolis, Russia",
-  date: "2021 – Present",
-  description: "Innopolis University",
-  logo: image("logos/iu.png"),
+  date: "2021 – 2025",
+  description: link("https://innopolis.university")[Innopolis University],
+  logo: image("assets/logos/iu.png"),
 )
 #resume-entry-content[
-  GPA *5.0* #sym.bar Awarded an increased scholarship for excellent academic achievements.
+  GPA *5.0* #sym.dot.c Graduated with Honors. Thesis on higher-order unification in Haskell accepted at #link("https://popl25.sigplan.org/details/wits-2025-papers/3/Towards-Generic-Higher-Order-Unification-Implementations-in-Haskell")[WITS 2025]#footnote[Co-located with #link("https://popl25.sigplan.org/")[POPL 2025].] and #link("https://cs.newpaltz.edu/unif2025/program.html")[UNIF 2025].
 ]
 
 #resume-entry-with-logo(
-  title: "Programming Curriculum (3 years)",
+  title: "Programming Curriculum",
   location: "Online",
   date: "2017 – 2020",
-  description: "Moscow School of Programmers at Yandex",
-  logo: image("logos/mshp.png"),
+  description: [Moscow School of Programmers at Yandex],
+  logo: image("assets/logos/mshp.png"),
 )
 #resume-entry-content[
-  GPA *5.0* #sym.bar Led a team for a final project recognized as the best in the stream.
+  GPA *5.0* #sym.dot.c Graduated with Honors. Led a team for a final project recognized as the best in the stream.
 ]
 
-= Certificates
+// = Certificates
 
-#certificate-entry(
-  "Diploma for excellent academic achievements",
-  "Innopolis University",
-  "2023",
-)
-#certificate-entry(
-  "Commendation for development of an Olympiad",
-  "NTO Committee",
-  "2022",
-)
-#certificate-entry("The winning team (Blockchain track)", "NTO", "2021")
-#certificate-entry(
-  "Summer School in Blockchain",
-  "Innopolis University",
-  "2020",
-)
-#certificate-entry(
-  "Certificate, with honors",
-  "Moscow Programming School at Yandex",
-  "2020",
-)
+// #certificate-entry(
+//   "Diploma for excellent academic achievements",
+//   "Innopolis University",
+//   "2023",
+// )
+// #certificate-entry(
+//   "Commendation for development of an Olympiad",
+//   "NTO Committee",
+//   "2022",
+// )
+// #certificate-entry("The winning team (Blockchain track)", "NTO", "2021")
+// #certificate-entry(
+//   "Summer School in Blockchain",
+//   "Innopolis University",
+//   "2020",
+// )
 
-#let certificates_url = "https://drive.google.com/file/d/1AT5iVNn6YGGP-TxuuYN-IaSRFS514hLn/view?usp=sharing"
+// #let certificates_url = "https://drive.google.com/file/d/1AT5iVNn6YGGP-TxuuYN-IaSRFS514hLn/view?usp=sharing"
 
-#section-note[The certificates are available in #link(certificates_url)[Google Drive].]
+// #section-note[The certificates are available in #link(certificates_url)[Google Drive].]
 
 // = Research
 

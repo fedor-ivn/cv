@@ -1,0 +1,423 @@
+{
+  "meta": {
+    "evaluation_mode": "intrinsic",
+    "inferred_level": "Mid",
+    "inferred_level_confidence": "Medium",
+    "inferred_primary_role_type": "SWE",
+    "word_count_approximate": 560,
+    "page_count_approximate": 1
+  },
+  "gates": {
+    "g1_minimum_content": "Pass",
+    "gate_failure_reason": null
+  },
+  "dimensions": {
+    "d1_impact_achievement": {
+      "score": 3.0,
+      "score_confidence": "High",
+      "confidence_reason": "All bullets are legible; classification is unambiguous. Blockscout and Projects bullets are exemplary; Blockchain Track Lead bullets are the primary drag.",
+      "weight": 0.25,
+      "achievement_bullet_rate": "83%",
+      "responsibility_bullet_count": 2,
+      "key_strengths": [
+        "All three Blockscout bullets score XYZS 4 — clear achievements with method, measurement, and scope",
+        "Both Projects bullets score XYZS 4 — business outcome (revenue, maintenance reduction) fully articulated",
+        "No pure duty statements in the current or most recent roles"
+      ],
+      "key_weaknesses": [
+        "BTL1 and BTL4 are score-1 bullets — deliverable-description and commendation, respectively, with no outcome or method",
+        "BTL3 ('Managed a team of 5') uses a responsibility framing with no stated outcome from the team's work",
+        "BTL2 hedges impact with 'significantly reducing' rather than a concrete metric"
+      ],
+      "bullet_analysis": [
+        {
+          "text": "Architected an open-source Rust indexer for cross-chain bridge messages, delivering Avalanche ICM/ICTT coverage across 400+ L1s (~160K bridging routes) — Blockscout's self-hostable alternative to Routescan — actively extending to LayerZero (159M+ messages, 168 chains).",
+          "xyzs_score": 4,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": null,
+          "rewrite_hint": null
+        },
+        {
+          "text": "Led end-to-end delivery for Celo (Blockscout's busiest instance: 25K DAU, ~1.84M txs/day), Filecoin FVM, and Zilliqa by owning core backend development (RPCs, APIs, indexing) and coordinating cross-functional delivery — generating ~$420K in development revenue and converting all 3 chains to $300K+/year in hosting contracts; earned commendations from Celo.",
+          "xyzs_score": 4,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": null,
+          "rewrite_hint": null
+        },
+        {
+          "text": "Reclaimed ~340 TiB (~61%) across 48 Blockscout instances through research schema normalizations — address interning, log-topic deduplication, on-demand bytecode fetching — plus designed a citus-columnar archival tier for internal transactions (benchmarked ~10x compression).",
+          "xyzs_score": 4,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": null,
+          "rewrite_hint": null
+        },
+        {
+          "text": "Automated LizardFS installation using Ansible roles; enhanced observability with custom probers, alerts, runbooks, and Grafana dashboards.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": false },
+          "missing": "Y — no quantification of time saved, deployment frequency, or coverage gained. S — scope is implied by the role summary (13PB DWH, 10K DAU) but absent from this bullet.",
+          "rewrite_hint": "Add provisioning time reduction (e.g., from manual to fully automated) and anchor to the DWH scale."
+        },
+        {
+          "text": "Developed a comprehensive library of Docker images for GreenPlum and LizardFS to support automated testing of ETL pipelines.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": false },
+          "missing": "Y — no quantification (image count, test coverage %, cycle time reduction). S — ETL pipelines is a purpose statement, not a scope anchor. X is implicit — the achievement is enabling automated testing, not just building the library.",
+          "rewrite_hint": "Quantify coverage or speed gain and state scale (number of pipelines or data volume tested)."
+        },
+        {
+          "text": "Initiated alert retrospectives that reduced false positives and non-critical alerts by 30%.",
+          "xyzs_score": 3,
+          "components": { "X": true, "Y": true, "Z": true, "S": false },
+          "missing": "S — scope inferred from role summary (13PB DWH, 10K DAU) but not stated in this bullet.",
+          "rewrite_hint": "Append 'across the 13PB DWH monitoring stack' or similar to anchor scope explicitly."
+        },
+        {
+          "text": "Designed a comprehensive final task for a Web 3.0 application to assess participants' blockchain, backend, and frontend skills.",
+          "xyzs_score": 1,
+          "components": { "X": true, "Y": false, "Z": false, "S": false },
+          "missing": "Y — no quantification. Z — 'Web 3.0 application' is the deliverable type, not the method. S — participant count is in the role summary, not here. The bullet describes a deliverable, not an outcome.",
+          "rewrite_hint": "Reframe around adoption or reception: 'Designed and shipped the final-round assessment task used by 1000+ Olympiad participants, covering blockchain smart contracts, backend APIs, and frontend delivery.'"
+        },
+        {
+          "text": "Streamlined grading through automated checks and LMS integration, significantly reducing workload and minimizing human error.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": false },
+          "missing": "Y — 'significantly reducing' is hedged; concrete hours saved or error rate reduction is absent. S — no participant or submission count.",
+          "rewrite_hint": "Replace 'significantly reducing' with a number: e.g., 'cutting manual grading time from [X] hours to [Y] hours per round for 1000+ submissions.'"
+        },
+        {
+          "text": "Managed a team of 5: set goals, deadlines, and handled unforeseen challenges throughout a season with over 1000 participants.",
+          "xyzs_score": 2,
+          "components": { "X": false, "Y": true, "Z": true, "S": true },
+          "missing": "X — 'Managed' is a responsibility verb; no concrete outcome from the team's work is stated. The bullet quantifies scope but not what the team accomplished.",
+          "rewrite_hint": "Lead with an outcome: 'Delivered a 3-stage Olympiad on time with a team of 5, serving 1000+ participants — achieving zero critical failures across all stages.'"
+        },
+        {
+          "text": "Earned commendations from both participants and management for successful execution.",
+          "xyzs_score": 1,
+          "components": { "X": true, "Y": false, "Z": false, "S": false },
+          "missing": "Y — 'both participants and management' is not a quantifier. Z — no method. S — no scope. This bullet adds little beyond the commendation mention already embedded in B2.",
+          "rewrite_hint": "Either remove this bullet (commendation already mentioned in Blockscout B2) or replace with a concrete outcome from the execution."
+        },
+        {
+          "text": "Generated $32,800 in revenue from >1,000 enrolled students by launching a Linux course on Stepik with auto-grading and a self-hosted Cloud IDE.",
+          "xyzs_score": 4,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": null,
+          "rewrite_hint": null
+        },
+        {
+          "text": "Cut ongoing maintenance to ~6h/month by shipping a Scala/ZIO microservice for Stepik LMS integration and a Python-based task evaluator.",
+          "xyzs_score": 4,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": null,
+          "rewrite_hint": "Minor: baseline maintenance hours not stated; adding 'from ~Xh/month' would make Y fully anchored."
+        }
+      ],
+      "top_rewrite_suggestions": [
+        {
+          "original": "Streamlined grading through automated checks and LMS integration, significantly reducing workload and minimizing human error.",
+          "rewritten": "Cut grading time from ~[X] hours to [Y] hours per round by implementing automated checks and LMS integration for 1000+ Olympiad submissions, reducing manual error rate to near zero.",
+          "xyzs_before": 2,
+          "xyzs_after": 4,
+          "pattern_applied": "add-quantification",
+          "data_needed": "Actual grading time before and after automation; error rate or count if available."
+        },
+        {
+          "original": "Designed a comprehensive final task for a Web 3.0 application to assess participants' blockchain, backend, and frontend skills.",
+          "rewritten": "Shipped the final-round assessment task covering smart contracts, backend APIs, and frontend delivery — adopted for 1000+ Olympiad participants across 3 competition stages.",
+          "xyzs_before": 1,
+          "xyzs_after": 3,
+          "pattern_applied": "responsibility-to-achievement",
+          "data_needed": null
+        },
+        {
+          "original": "Automated LizardFS installation using Ansible roles; enhanced observability with custom probers, alerts, runbooks, and Grafana dashboards.",
+          "rewritten": "Reduced LizardFS provisioning from [X hours] to fully automated by writing Ansible roles; expanded DWH observability to [N] nodes with custom probers, alert runbooks, and Grafana dashboards for a 13PB data platform.",
+          "xyzs_before": 2,
+          "xyzs_after": 4,
+          "pattern_applied": "add-quantification",
+          "data_needed": "Time to provision before Ansible automation; number of nodes or clusters covered."
+        }
+      ]
+    },
+    "d2_quantification": {
+      "score": 3.0,
+      "score_confidence": "High",
+      "confidence_reason": "Quantification status is directly observable from the bullet text. All Blockscout and Projects bullets have concrete numbers; Tinkoff and BTL bullets are the primary gap.",
+      "weight": 0.20,
+      "quantification_rate": "58%",
+      "key_strengths": [
+        "All three Blockscout bullets carry multiple specific metrics (revenue, user counts, data volume, compression ratios)",
+        "Projects section is fully quantified ($32,800, >1,000 students, ~6h/month)",
+        "T3 hits 30% reduction — the one strong Tinkoff metric"
+      ],
+      "key_weaknesses": [
+        "BTL section has no valid quantification in 3 of 4 bullets (BTL2 hedges with 'significantly')",
+        "T1 and T2 contain no numbers despite being infrastructure-impact bullets in a 13PB system",
+        "Promo Interactive bullets are in summary form only — their quantification (30s → 0.5s, $1,500/month) is real but buried in a non-standard location"
+      ],
+      "bullet_analysis": [
+        {
+          "text": "Architected an open-source Rust indexer for cross-chain bridge messages, delivering Avalanche ICM/ICTT coverage across 400+ L1s (~160K bridging routes) — Blockscout's self-hostable alternative to Routescan — actively extending to LayerZero (159M+ messages, 168 chains).",
+          "xyzs_score": 4,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": null,
+          "rewrite_hint": null
+        },
+        {
+          "text": "Led end-to-end delivery for Celo (Blockscout's busiest instance: 25K DAU, ~1.84M txs/day), Filecoin FVM, and Zilliqa by owning core backend development (RPCs, APIs, indexing) and coordinating cross-functional delivery — generating ~$420K in development revenue and converting all 3 chains to $300K+/year in hosting contracts; earned commendations from Celo.",
+          "xyzs_score": 4,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": null,
+          "rewrite_hint": null
+        },
+        {
+          "text": "Reclaimed ~340 TiB (~61%) across 48 Blockscout instances through research schema normalizations — address interning, log-topic deduplication, on-demand bytecode fetching — plus designed a citus-columnar archival tier for internal transactions (benchmarked ~10x compression).",
+          "xyzs_score": 4,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": null,
+          "rewrite_hint": null
+        },
+        {
+          "text": "Automated LizardFS installation using Ansible roles; enhanced observability with custom probers, alerts, runbooks, and Grafana dashboards.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": false },
+          "missing": "Y — no quantification of provisioning speed improvement, node count covered, or alert volume.",
+          "rewrite_hint": "Add provisioning time delta or coverage count."
+        },
+        {
+          "text": "Developed a comprehensive library of Docker images for GreenPlum and LizardFS to support automated testing of ETL pipelines.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": false },
+          "missing": "Y — no quantification (image count, test coverage %, cycle time reduction).",
+          "rewrite_hint": "Add number of images created or coverage metric achieved."
+        },
+        {
+          "text": "Initiated alert retrospectives that reduced false positives and non-critical alerts by 30%.",
+          "xyzs_score": 3,
+          "components": { "X": true, "Y": true, "Z": true, "S": false },
+          "missing": "S — scope (DWH scale) absent from bullet.",
+          "rewrite_hint": null
+        },
+        {
+          "text": "Designed a comprehensive final task for a Web 3.0 application to assess participants' blockchain, backend, and frontend skills.",
+          "xyzs_score": 1,
+          "components": { "X": true, "Y": false, "Z": false, "S": false },
+          "missing": "Y, Z, S all absent.",
+          "rewrite_hint": "Add participant count and what the task produced/assessed."
+        },
+        {
+          "text": "Streamlined grading through automated checks and LMS integration, significantly reducing workload and minimizing human error.",
+          "xyzs_score": 2,
+          "components": { "X": true, "Y": false, "Z": true, "S": false },
+          "missing": "Y — hedged ('significantly reducing'); no concrete metric.",
+          "rewrite_hint": "Replace with quantified reduction in grading time or error count."
+        },
+        {
+          "text": "Managed a team of 5: set goals, deadlines, and handled unforeseen challenges throughout a season with over 1000 participants.",
+          "xyzs_score": 2,
+          "components": { "X": false, "Y": true, "Z": true, "S": true },
+          "missing": "X — responsibility framing; quantifiers are scope anchors, not impact metrics.",
+          "rewrite_hint": "Reframe to state a team outcome."
+        },
+        {
+          "text": "Earned commendations from both participants and management for successful execution.",
+          "xyzs_score": 1,
+          "components": { "X": true, "Y": false, "Z": false, "S": false },
+          "missing": "Y, Z, S all absent.",
+          "rewrite_hint": "Remove or replace with a concrete outcome bullet."
+        },
+        {
+          "text": "Generated $32,800 in revenue from >1,000 enrolled students by launching a Linux course on Stepik with auto-grading and a self-hosted Cloud IDE.",
+          "xyzs_score": 4,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": null,
+          "rewrite_hint": null
+        },
+        {
+          "text": "Cut ongoing maintenance to ~6h/month by shipping a Scala/ZIO microservice for Stepik LMS integration and a Python-based task evaluator.",
+          "xyzs_score": 4,
+          "components": { "X": true, "Y": true, "Z": true, "S": true },
+          "missing": null,
+          "rewrite_hint": "Minor: baseline hours not stated; 'from ~Xh/month to ~6h/month' would complete Y."
+        }
+      ],
+      "top_rewrite_suggestions": [
+        {
+          "original": "Streamlined grading through automated checks and LMS integration, significantly reducing workload and minimizing human error.",
+          "rewritten": "Cut grading time from [X] hours to [Y] hours per round by implementing automated checks and LMS integration for 1000+ Olympiad submissions.",
+          "xyzs_before": 2,
+          "xyzs_after": 4,
+          "pattern_applied": "add-quantification",
+          "data_needed": "Grading hours per round before and after automation."
+        },
+        {
+          "original": "Automated LizardFS installation using Ansible roles; enhanced observability with custom probers, alerts, runbooks, and Grafana dashboards.",
+          "rewritten": "Automated LizardFS provisioning with Ansible roles, reducing setup time from [X hours] to [Y minutes]; extended DWH observability to [N] nodes with custom probers and Grafana dashboards across the 13PB platform.",
+          "xyzs_before": 2,
+          "xyzs_after": 4,
+          "pattern_applied": "add-quantification",
+          "data_needed": "Provisioning time before/after; number of nodes or clusters covered by observability tooling."
+        }
+      ]
+    },
+    "d3_clarity_conciseness": {
+      "score": 3.0,
+      "score_confidence": "High",
+      "confidence_reason": "Language quality is directly observable. Strong verbs dominate; one clear anti-pattern found.",
+      "weight": 0.15,
+      "flagged_patterns": [
+        "BTL2: 'significantly reducing workload and minimizing human error' — hedged quantification, no number",
+        "B1 is a multi-clause sentence with em dashes and parentheticals; signal density is high but readability is somewhat strained",
+        "BTL4: 'for successful execution' — vague, adds no signal"
+      ],
+      "weak_verbs_found": ["Managed (BTL3)", "Developed (T2)", "Earned (BTL4)"],
+      "buzzwords_found": ["comprehensive (used twice: BTL1, T2)"],
+      "key_strengths": [
+        "Dominant action verbs are strong: Architected, Led, Reclaimed, Automated, Initiated, Generated, Cut",
+        "No first-person pronouns",
+        "No passive constructions ('was responsible for', 'was involved in')",
+        "Technical terminology is precise and field-appropriate",
+        "Tense is consistent throughout (past for ended roles, present/progressive for current)"
+      ],
+      "key_weaknesses": [
+        "'Significantly reducing' in BTL2 is an explicit anti-pattern per the writing standard",
+        "'Comprehensive' appears twice and adds no signal — remove or replace",
+        "B1 is borderline long; a reader must parse three layers of qualification (ICM/ICTT, Routescan comparison, LayerZero extension)"
+      ]
+    },
+    "d4_structure_formatting": {
+      "score": 3.0,
+      "score_confidence": "High",
+      "confidence_reason": "Section presence and formatting are directly verifiable from the source.",
+      "weight": 0.15,
+      "sections_present": [
+        "Contact information (name, email, phone, GitHub, LinkedIn, Telegram)",
+        "Experience (4 entries, reverse chronological with dates, company, title, location)",
+        "Projects (1 entry with 2 bullets)",
+        "Education (2 entries)"
+      ],
+      "sections_missing": [
+        "Dedicated Skills section (commented out; replaced by per-entry skill tags — non-standard but functional)"
+      ],
+      "formatting_issues": [
+        "Promo Interactive entry has no bullets — all content is a single summary line; breaks the consistent pattern of every other role",
+        "Skills are embedded as inline tags on each entry rather than a dedicated scannable section; reduces at-a-glance technical stack readability",
+        "No location for Promo Interactive listed in the source"
+      ],
+      "hierarchy_issues": [],
+      "length_flag": "One page — appropriate for the experience level and content volume"
+    },
+    "d5_career_progression": {
+      "score": 3.5,
+      "score_confidence": "Medium",
+      "confidence_reason": "Title progression and scope growth are clear, but a 12-month gap (Apr 2022 – Apr 2023) is likely education-related; cannot confirm without additional context.",
+      "weight": 0.10,
+      "progression_signals": [
+        "Backend Engineer (2020) → Blockchain Track Lead with team of 5 (2021) → SRE at Tinkoff (2023) → Blockchain Engineer & Tech Lead at Blockscout (2024)",
+        "Business impact escalation: $1,500/month licensing → $420K development revenue + $300K+/year hosting",
+        "Scope growth: individual contributor → team lead → cross-chain delivery owner",
+        "Academic excellence signal: GPA 5.0, graduated with honors, thesis accepted at WITS 2025 and UNIF 2025 (POPL co-located)"
+      ],
+      "stagnation_flags": [
+        "Tinkoff role was 7 months — short tenure; the voluntary exit reason is absent but no penalty applied"
+      ],
+      "gap_flags": [
+        "Apr 2022 – Apr 2023: ~12-month gap — context note only; likely reflects full-time university focus (enrolled 2021–2025); no penalty",
+        "Nov 2023 – Feb 2024: ~3 months — within acceptable range; no flag needed"
+      ],
+      "recency_weighting_ok": true
+    },
+    "d6_technical_signal": {
+      "score": 3.5,
+      "score_confidence": "Medium",
+      "confidence_reason": "Blockchain/cross-chain protocol domain is specialized; evaluator has general familiarity with the technologies but cannot fully verify all protocol-specific depth claims. Score could be 4 with domain-expert confirmation.",
+      "weight": 0.10,
+      "skills_list_size": 18,
+      "over_listing_flag": false,
+      "categorized_flag": true,
+      "depth_signal_assessment": "Blockscout bullets demonstrate architecture-level depth: Rust indexer design, cross-chain protocol coverage (Avalanche ICM/ICTT, LayerZero), PostgreSQL schema optimization at scale (citus-columnar, address interning, log-topic deduplication). This is strong SWE depth signal. Tinkoff bullets mention tools (Ansible, Docker, GreenPlum, ClickHouse) but show surface-level engagement without architecture or depth evidence. The academic thesis on higher-order unification (accepted at WITS/UNIF 2025, POPL co-located) is a strong CS depth signal that is appropriately placed in Education.",
+      "skill_bullet_inconsistencies": [
+        "'Frontend' is listed as a skill tag for the Blockchain Track Lead role but no frontend contribution is described in the bullets",
+        "Elixir is listed for Blockscout but no Elixir-specific contribution appears in the bullets (may be implicit in backend/indexing work)"
+      ]
+    },
+    "d7_spelling_grammar": {
+      "score": 3.5,
+      "score_confidence": "High",
+      "confidence_reason": "Document-level language quality is directly observable; evaluation is high-confidence.",
+      "weight": 0.05,
+      "error_count_approximate": 1,
+      "errors_found": [
+        "BTL4: 'Earned commendations from both participants and management for successful execution' — grammatically correct but factually vague and stylistically weak; not an error but a professionalism concern"
+      ],
+      "tense_consistency": "Consistent",
+      "professionalism_flags": [
+        "Phone number format uses Russian-style (+7 area code) — appropriate for the candidate's context; no issue"
+      ]
+    }
+  },
+  "composite": {
+    "raw_weighted_score": 3.125,
+    "normalized_score": 70.8,
+    "label": "Strong"
+  },
+  "flags": {
+    "hard_flags": [],
+    "soft_flags": [
+      "Promo Interactive has no bullets — strong quantification exists (30s → 0.5s query improvement, $1,500/month licensing) but is buried in a summary line; converting to 1-2 bullets would improve D1 and D2 rates",
+      "BTL4 ('Earned commendations...') is the weakest bullet on the CV; it adds no signal beyond what is already in Blockscout B2 and could be removed"
+    ],
+    "bias_guardrail_notes": [
+      "Level inference: Candidate is scored as Mid (3-7 years). Total professional SWE experience is ~3.5-4 years, placing them at the upper boundary of Mid. However, Blockscout scope (Tech Lead, $420K+ revenue, cross-chain delivery) shows strong Senior signals. Scoring against Mid per rubric policy (lower plausible level). If Senior is confirmed, D1 and D2 would apply stricter thresholds — current scores may decrease slightly.",
+      "Apr 2022 – Apr 2023 gap (~12 months): Treated as likely education-focused (enrolled at Innopolis University 2021–2025). No penalty applied. If this period contained other work, D5 score may need revision.",
+      "Blockchain/Web3 domain: Evaluator has general familiarity with cross-chain protocols (Avalanche, LayerZero) and DeFi infrastructure. D6 confidence is Medium — a domain-specialist reviewer may find additional depth or gaps not visible here.",
+      "Promo Interactive summary: Strong quantification (30s → 0.5s query optimization, $1,500/month licensing) is in summary format rather than bullets. These metrics were excluded from formal bullet XYZS scoring but noted for completeness."
+    ]
+  },
+  "priority_improvements": [
+    {
+      "rank": 1,
+      "dimension": "D2",
+      "issue": "BTL2 uses hedged language ('significantly reducing') instead of a concrete metric; T1 and T2 have no quantification in a 13PB data platform context where numbers should exist",
+      "suggestion": "Replace 'significantly reducing workload' with actual hours/percentage saved. For T1, add provisioning time delta or node count. For T2, add image count or pipeline coverage percentage.",
+      "example_before": "Streamlined grading through automated checks and LMS integration, significantly reducing workload and minimizing human error.",
+      "example_after": "Cut grading time from [X] hours to [Y] hours per round by implementing automated checks and LMS integration for 1000+ Olympiad submissions."
+    },
+    {
+      "rank": 2,
+      "dimension": "D1",
+      "issue": "BTL1 describes a deliverable ('Designed a comprehensive final task') with no outcome, and BTL4 ('Earned commendations') adds no signal",
+      "suggestion": "Rewrite BTL1 to lead with adoption/reception as outcome. Drop BTL4 entirely — the commendation signal is already captured in Blockscout B2.",
+      "example_before": "Designed a comprehensive final task for a Web 3.0 application to assess participants' blockchain, backend, and frontend skills.",
+      "example_after": "Shipped the final-round assessment task covering smart contracts, backend APIs, and frontend delivery — adopted as the standard evaluation for 1000+ participants across 3 competition stages."
+    },
+    {
+      "rank": 3,
+      "dimension": "D4",
+      "issue": "Promo Interactive has no bullets — key quantified achievements (30s → 0.5s query, $1,500/month product) are buried in a summary line and invisible to bullet-level scanning",
+      "suggestion": "Convert Promo summary into 1-2 structured bullets following the same pattern as other roles.",
+      "example_before": "Optimized queries (30s → 0.5s) for Danone's lab software serving ~800 technicians; Built a logistics automation system licensed at $1,500/month.",
+      "example_after": "- Reduced lab query latency from 30s to 0.5s for Danone's quality-control software serving ~800 technicians.\n- Built a logistics automation product licensed at $1,500/month."
+    },
+    {
+      "rank": 4,
+      "dimension": "D6",
+      "issue": "'Frontend' listed as a skill tag for the Blockchain Track Lead role but no frontend work described in bullets",
+      "suggestion": "Remove 'Frontend' from the BTL skill tag or add a brief bullet describing the frontend contribution to the Olympiad task.",
+      "example_before": null,
+      "example_after": null
+    },
+    {
+      "rank": 5,
+      "dimension": "D4",
+      "issue": "No dedicated Skills section — technical stack is only accessible through per-entry skill tags",
+      "suggestion": "Consider adding a compact grouped Skills section (Languages, Infrastructure, Databases) at the top or bottom. Even 3-4 grouped lines significantly improve recruiter scan speed.",
+      "example_before": null,
+      "example_after": null
+    }
+  ],
+  "summary_narrative": "Fedor Ivanov's CV presents a Mid-level SWE with strong Tech Lead signals, scored against the Mid calibration. The Blockscout section is genuinely exemplary — all three bullets score XYZS 4 with specific technical depth (Rust, cross-chain protocols, PostgreSQL at scale), clear business impact ($420K revenue, $300K+/year contracts), and impressive operational scope (400+ L1s, 48 instances, 340 TiB reclaimed). The Projects section is equally strong with full quantification. The main drag comes from the Blockchain Track Lead section (two score-1 bullets, one hedged metric) and the Tinkoff section (two unquantified infrastructure bullets). Priority actions: quantify the BTL grading automation and Tinkoff provisioning work, rewrite BTL1 as an outcome bullet, drop BTL4, and move the Promo Interactive summary content into structured bullets where the 30s → 0.5s query improvement and $1,500/month product can be properly surfaced."
+}

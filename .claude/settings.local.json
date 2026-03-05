@@ -3,7 +3,18 @@
     "allow": [
       "WebSearch",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:typst.app)"
+      "WebFetch(domain:typst.app)",
+      "WebFetch(domain:stepik.org)",
+      "mcp__notion__notion-fetch",
+      "mcp__notion__notion-search",
+      "WebFetch(domain:www.blog.blockscout.com)",
+      "Bash(gh pr:*)",
+      "mcp__claude_ai_Blockscout__get_address_info",
+      "WebFetch(domain:layerzeroscan.com)",
+      "WebFetch(domain:snowtrace.io)",
+      "mcp__claude_ai_Blockscout__direct_api_call",
+      "mcp__claude_ai_Blockscout__get_chains_list",
+      "WebFetch(domain:layerzero.network)"
     ]
   }
 }

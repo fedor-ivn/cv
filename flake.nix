@@ -44,18 +44,10 @@
         ];
 
         virtualPaths = [
-          # Add paths that must be locally accessible to typst here
-          # {
-          #   dest = "icons";
-          #   src = "${inputs.font-awesome}/svgs/regular";
-          # }
+
           {
-            dest = "profile.jpeg";
-            src = ./profile.jpeg;
-          }
-          {
-            dest = "logos";
-            src = ./logos;
+            dest = "assets";
+            src = ./assets;
           }
         ];
       };
