@@ -377,7 +377,7 @@
 )
 #resume-entry-content(
   [
-    - Architected an #link("https://github.com/blockscout/blockscout-rs/tree/main/interchain-indexer")[open-source Rust indexer] for cross-chain bridge messages, delivering Avalanche ICM/ICTT coverage across 400+ L1s (#sym.approx\160K bridging routes) --- Blockscout's self-hostable alternative to Routescan --- actively extending to LayerZero (159M+ messages, 168 chains).
+    - Architected and developed an #link("https://github.com/blockscout/blockscout-rs/tree/main/interchain-indexer")[open-source Rust indexer] for cross-chain bridge messages, delivering Avalanche ICM/ICTT coverage across 400+ L1s (#sym.approx\160K bridging routes) --- Blockscout's self-hostable alternative to Routescan --- actively extending to LayerZero (159M+ messages, 168 chains).
     - Led end-to-end delivery for Celo (Blockscout's busiest instance: 25K DAU, #sym.approx\1.84M txs/day), Filecoin FVM, and Zilliqa by executing core backend development and leading cross-functional team --- generating #sym.approx\$420K in development revenue and converting all 3 chains to \$300K+/year in hosting contracts; earned commendations from Celo.
     - Reclaimed #sym.approx\340 TiB (#sym.approx\61%) across 48 Blockscout instances through research schema normalizations --- address interning, log-topic deduplication, on-demand bytecode fetching --- plus designed a citus-columnar archival tier for internal transactions (benchmarked #sym.approx\10x compression).
   ],
