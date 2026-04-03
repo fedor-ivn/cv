@@ -1,33 +1,38 @@
 #import "brilliant-CV/template.typ": *
 #show: layout
-#set text(size: 12pt) //set global font size
+#set text(size: 14pt) //set global font size
 
-#letterHeader(
-  myAddress: [1 Rue Gonnet \ 75003 Paris, France],
-  recipientName: [ABC Company],
-  recipientAddress: [15 Boulevard Roi \ 75011 Paris, France],
-  date: [05/05/2023],
-  subject: "Subject: Job Application for Senior Data Analyst"
-)
+// #letterHeader(
+//   myAddress: "",
+//   recipientName: "",
+//   recipientAddress: "",
+//   date: [15/12/2023],
+//   subject: "Subject: Job Application for Rust/Elixir Developer"
+// )
+
+#v(50pt)
 
 Dear Hiring Manager,
 
-I am excited to submit my application for the Senior Data Analyst position at ABC Company. With over 5 years of experience in data analysis and a demonstrated track record of success, I am confident in my ability to make a valuable contribution to your team.
+I would express my strong interest in the Developer position at Blockscout. I was exited to learn about this opportunity as I have been using your company's main product. I am impressed by your commitment to open-source and the cool stack you employ, such as Elixir and Rust.
 
-In my current role as a Data Analyst at XYZ Company, I have gained extensive experience in data mining, quantitative analysis, and data visualization. Through my work, I have developed a deep understanding of statistical concepts and have become adept at using tools such as SQL, Python, and R to extract insights from complex datasets. I have also gained valuable experience in presenting complex data in a visually appealing and easily accessible manner to stakeholders across all levels of an organization.
+I am passionated about blockchain from 2020, and since then, I have dedicated myself to studying this field. This dedication was recognized when I won the National Technology Olympiad 2021 in the Blockchain Track. Following this achievement, I was invited by Innopolis University to craft the 2022 season of the Olympiad, a challenge I embraced and successfully executed.
 
-I believe that my experience in data analysis makes me an ideal candidate for the Senior Data Analyst position at ABC Company. I am particularly excited about the opportunity to apply my skills to support your organization's mission and drive impactful insights. Your focus on driving innovative solutions to complex problems aligns closely with my own passion for using data analysis to drive positive change in organizations.
+In addition to my blockchain expertise, I have a strong interest in functional programming, having completed the elective courses in Programming Paradigms, Haskell, and Scala during my university years. These courses have given me a strong foundation in FP, which I believe will help me to quickly dive into Elixir or Rust.
 
-In my current role, I have been responsible for leading data projects from initiation to completion. I work closely with cross-functional teams to identify business problems and use data to develop solutions that drive business outcomes. I have a proven track record of delivering high-quality work on time and within budget.
+While I almost do not have experience with Rust, I am eager to learn and use it in a large-scale project. To the best of my knowledge, Blockscout leverages Rust in the development of microservices, an area where my recent experience as a Site Reliability Engineer at Tinkoff and my 2+ years as a Backend developer would be highly relevant.
 
-Furthermore, I have extensive experience in developing and implementing data-driven solutions that improve business operations. For example, I have implemented predictive models that have improved sales forecasting accuracy by 10%, resulting in significant cost savings. I have also developed dashboards that provide real-time insights into business performance, enabling stakeholders to make more informed decisions.
+In conclusion, I believe that my blend of expertise in Backend, DevOps, and
+Blockchain, coupled with my passion for functional programming, positions me as
+a strong candidate for this role. I am excited about the prospect of
+contributing to Blockscout and look forward for your reply.
 
-As a highly motivated and detail-oriented individual, I am confident that I would thrive in the fast-paced and dynamic environment at ABC Company. I am excited about the opportunity to work with a talented team of professionals and to continue developing my skills in data analysis.
+Thank you for considering my application!
 
-Thank you for considering my application. I look forward to the opportunity to discuss my qualifications further.
+Best regards,
 
-Sincerely,
+Fedor Ivanov
 
-#letterSignature("/src/signature.png")
+// #letterSignature("/src/signature.png")
 #letterFooter()
 

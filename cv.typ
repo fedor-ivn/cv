@@ -4,8 +4,10 @@
 #cvHeader(hasPhoto: true, align: left)
   #autoImport("education")
   #autoImport("professional")
-  #autoImport("projects")
-  #autoImport("certificates")
-  #autoImport("publications")
   #autoImport("skills")
+  #pagebreak()
+  #autoImport("projects")
+  #autoImport("publications")
+  // todo: надо вообще сертификаты или нет?
+  #autoImport("certificates")
 #cvFooter()

@@ -3,25 +3,24 @@
 #cvSection("Education")
 
 #cvEntry(
-    title: [Master of Data Science],
-    society: [University of California, Los Angeles],
-    date: [2018 - 2020],
-    location: [USA],
-    logo: "../src/logos/ucla.png",
-    description: list(
-      [Thesis: Predicting Customer Churn in Telecommunications Industry using Machine Learning Algorithms and Network Analysis],
-      [Course: Big Data Systems and Technologies #hBar() Data Mining and Exploration #hBar() Natural Language Processing]
-    )
+    title: [Bachelor in Computer Science, Software Development track],
+    society: [Innopolis University],
+    date: [2021 - Present],
+    location: [Innopolis, Russia],
+    logo: "../src/logos/iu.png",
+    description: [
+      GPA *5.0* #hBar() Awarded an increased scholarship for excellent academic achievements
+    ]
 )
 
 #cvEntry(
-    title: [Bachelors of Science in Computer Science],
-    society: [University of California, Los Angeles],
-    date: [2018 - 2020],
-    location: [USA],
-    logo: "../src/logos/ucla.png",
-    description: list(
-      [Thesis: Exploring the Use of Machine Learning Algorithms for Predicting Stock Prices: A Comparative Study of Regression and Time-Series Models],
-      [Course: Database Systems #hBar() Computer Networks #hBar() Software Engineering #hBar() Artificial Intelligence]
-    )
+    title: [First programming education],
+    society: [Moscow School of Programmers at Yandex],
+    date: [2017 - 2020],
+    location: [Online],
+    logo: "../src/logos/mshp.png",
+    description: [
+      GPA *5.0* #hBar() Led a team for a final project that was recognized as
+      the best in the stream
+    ]
 )

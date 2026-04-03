@@ -36,7 +36,7 @@
 |                                       CV (_Chinese, green_)                                       |                                            Cover Letter (_Chinese, green_)                                            |
 | :------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------: |
 | ![CV](https://github.com/mintyfrankie/brilliant-CV/assets/77310871/cb9c16f5-8ad7-4256-92fe-089c108d07f5) | ![Letter](https://github.com/mintyfrankie/brilliant-CV/assets/77310871/a5a97be2-87e2-43fe-b605-f862a0d600d7)|
-
+![Alt text](image.png)
 
 ## Usage
 
